@@ -8,6 +8,7 @@ import validator from 'validator'
 export const loginUser = async (req,res) => {
   try{
     const {email,password} = req.body;
+    console.log(email,password)
     const user = await usermodel.findOne({email});
     if(!user){
       return res.json({success:false, message:"User not Exist"})

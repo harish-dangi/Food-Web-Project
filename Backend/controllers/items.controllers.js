@@ -2,7 +2,7 @@ import itemsModel from "../models/items.model.js";
 
 export const createItems = async (req, res) => {
   const { name, price, description, category, hearts, rating } = req.body;
-
+  // console.log("name",name)
   try {
     if (!name || !price || !description || !category) {
       return res.status(400).json({
