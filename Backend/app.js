@@ -12,10 +12,24 @@ const app = express();
 
 //MIDDLEWARE
 
-app.use(cors({
-  origin: ["http://localhost:5173", "http://localhost:5174"],
-  credentials: true
-}));
+const allowedOrigins = [
+  "http://localhost:5173",
+  "http://localhost:5173",
+  "https://food-web-project-pi.vercel.app",
+];
+
+app.use(
+  cors({
+    origin: function (origin, callback) {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
+    credentials: true,
+  })
+);
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
