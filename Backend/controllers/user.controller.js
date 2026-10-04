@@ -45,7 +45,7 @@ export const registorUser = async (req,res)=>{
   const {username,email,password} = req.body;
 
   try{
-    const userAlreadyExist = await usermodel.findOne({email,password});
+    const userAlreadyExist = await usermodel.findOne({email});
     if(userAlreadyExist){
       return res.json({
         success:false,
