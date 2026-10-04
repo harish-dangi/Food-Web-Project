@@ -28,7 +28,7 @@ const List = () => {
   const handleDelete = async (itemId) => {
     if (!window.confirm("Are you sure you want to delete this item?")) return;
     try {
-      await axios.delete(`http://localhost:4000/api/items/${itemId}`);
+      await axios.delete(`https://builder-ai-website.onrender.com/api/items/${itemId}`);
       setItems(prev => prev.filter(item => item._id !== itemId));
      
 
@@ -73,7 +73,7 @@ const List = () => {
 
               <tbody >
                 {items.map((item) => (
-                  <tr className={items.tr} className='border rounded-2xl ' key={item._id}>
+                  <tr className={`${items.tr}border rounded-2xl `} key={item._id}>
                     <td className={styles.imgCell}>
                       <img src={item.imageUrl} alt={item.name} className="h-30 w-30 rounded-2xl" />
                     </td>

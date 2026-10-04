@@ -18,7 +18,7 @@ const SpecialOffer = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:4000/api/items")
+      .get("https://builder-ai-website.onrender.com/api/items")
       .then((res) => setItems(res.data));
   }, []);
   const { cartItems, addToCart, updateQuantity, removeFromCart } = useCart();

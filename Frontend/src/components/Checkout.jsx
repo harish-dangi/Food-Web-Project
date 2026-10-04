@@ -37,7 +37,7 @@ const Checkout = () => {
       if (paymentStatus === "success" && sessionId) {
         axios
           .post(
-            "http://localhost:4000/api/order/create",
+            "https://builder-ai-website.onrender.com/api/order/create",
             { sessionId },
             { headers: authHeader },
           )
@@ -90,7 +90,7 @@ const Checkout = () => {
         // Save payload before redirecting to Stripe
        
         const { data } = await axios.post(
-          "http://localhost:4000/api/order/stripe",
+          "https://builder-ai-website.onrender.com/api/order/stripe",
           payload,
           { headers: authHeader },
         );
@@ -99,7 +99,7 @@ const Checkout = () => {
         window.location.href = data.url;
       } else {
         const { data } = await axios.post(
-          "http://localhost:4000/api/order/create",
+          "https://builder-ai-website.onrender.com/api/order/create",
           payload,
           { headers: authHeader },
         );
@@ -222,7 +222,7 @@ const Checkout = () => {
                     className="flex justify-between py-2 text-white"
                   >
                     <img
-                      src={`http://localhost:4000${item.item.imageUrl}`}
+                      src={`https://builder-ai-website.onrender.com${item.item.imageUrl}`}
                       className="w-16 h-16 rounded-xl object-contain "
                     />
                     <span>{item.item.name}</span>

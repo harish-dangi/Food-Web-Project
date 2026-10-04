@@ -140,7 +140,7 @@ const Footer = () => {
         Social Connect
       </h1>
       <div className="flex gap-4">
-        <Link to="https://leetcode.com/u/Harish_Dangi/">
+        <Link to="https://www.linkedin.com/in/harish-dangi-005969420/">
           <FaLinkedin className="text-2xl hover:scale-125 transition-all duration-300" />
         </Link>
 

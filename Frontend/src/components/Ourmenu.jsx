@@ -23,7 +23,7 @@ const Ourmenu = () => {
 
   useEffect(() => {
     // Fetch menu data from the API
-    axios.get('http://localhost:4000/api/items')
+    axios.get('https://builder-ai-website.onrender.com/api/items')
       .then(res => {
         const grouped = res.data.reduce((acc, item) => {
           if (!acc[item.category]) {

@@ -16,7 +16,7 @@ const Order = () => {
     const fetchOrders = async () => {
       try {
         const response = await axios.get(
-          'http://localhost:4000/api/order/getall',
+          'https://builder-ai-website.onrender.com/api/order/getall',
           {
             headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
           }
@@ -63,7 +63,7 @@ const Order = () => {
   const handleStatusChange = async (orderId, newStatus) => {
     try {
       const res = await axios.put(
-        `http://localhost:4000/api/order/${orderId}`,
+        `https://builder-ai-website.onrender.com/api/order/${orderId}`,
         { paymentStatus: newStatus }
       );
       setOrders(prev =>
@@ -118,7 +118,7 @@ const Order = () => {
   const updatePaymentStatus = async (orderId, status) => {
     try {
       const fetchOrders = await axios.patch(
-        `http://localhost:4000/api/order/${orderId}/payment-status`,
+        `https://builder-ai-website.onrender.com/api/order/${orderId}/payment-status`,
         {
           paymentStatus: status,
         }
@@ -133,7 +133,7 @@ const Order = () => {
       <div className="max-w-full mx-auto ">
         <div className={layoutClasses.card + "w-full "} >
           <h2 className={styles.title}> Order Mangement</h2>
-          <div className={tableClasses.headerRow} className=''>
+          <div className={tableClasses.headerRow} >
             <table className=" overflow-auto ">
               <thead className='bg-amber-500/10    '>
                 <tr className=" items-center justify-center gap-10 ">
@@ -149,13 +149,13 @@ const Order = () => {
                   // Use the precomputed total if available; otherwise calculate price × quantity for each item
                   const totalPrice = order.total ?? order.items.reduce((s, i) => s + i.item.price * i.quantity, 0);
                   // Look up the display details for the payment method (lowercased), defaulting if not found
-                  // eslint-disable-next-line no-undef
+                   
                   const payMethod = paymentMethodDetails[order.paymentMethod?.toLowerCase()] || paymentMethodDetails.default;
                   // Pick the style for the payment status, falling back to “processing” if unknown
-                  // eslint-disable-next-line no-undef
+                   
                   const payStatusStyle = statusStyles[order.paymentStatus] || statusStyles.processing;
                   // Pick the style for the order’s overall status, falling back to “processing” if unknown
-                  // eslint-disable-next-line no-undef
+                   
                   const stat = statusStyles[order.status] || statusStyles.processing;
 
                   return (
@@ -207,7 +207,7 @@ const Order = () => {
                               className="flex items-center gap-3 rounded-xl border bg-white p-2 shadow-sm hover:shadow-md transition"
                             >
                               <img
-                                src={`http://localhost:4000${itm.item.imageUrl}`}
+                                src={`https://builder-ai-website.onrender.com${itm.item.imageUrl}`}
                                 alt={itm.item.name}
                                 className="h-14 w-14 rounded-lg border object-cover"
                               />

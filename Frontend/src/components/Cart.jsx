@@ -35,7 +35,7 @@ const Cart = () => {
             {cartItems.map((item) => (
               <div key={item._id} className='flex flex-col items-center justify-between p-2  border-amber-300 border rounded-xl shadow-md bg-linear-to-r from-orange-900 to-amber-700   gap-2 hover:shadow-lg hover:shadow-amber-400/50 transition-all duration-300 hover:scale-105 '>
 
-                <img src={`http://localhost:4000${item.item.imageUrl}`} alt={item.item.name} className='w-60 h-60  object-cover rounded-md object-center ' />
+                <img src={`https://builder-ai-website.onrender.com${item.item.imageUrl}`} alt={item.item.name} className='w-60 h-60  object-cover rounded-md object-center ' />
                 <span className='text-sm  text-amber-100'>{item.item.name}</span>
 
                 <p className='text-xs text-amber-300 italic '>{item.item.description}</p>

@@ -46,7 +46,7 @@ const AddItems = () => {
         payload.append(key, val)
       })
 
-       await axios.post('http://localhost:4000/api/items', payload,
+       await axios.post('https://builder-ai-website.onrender.com/api/items', payload,
         { headers: { 'Content-Type': 'multipart/form-data' } }
       );
 

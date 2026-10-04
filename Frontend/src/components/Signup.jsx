@@ -29,7 +29,7 @@ const AwesomeToast = ({ message, icon }) => {
     </div>
   );
 };
-const url = "http://localhost:4000";
+const url = "https://builder-ai-website.onrender.com";
 const Signup = () => {
   const [showToast, setShowToast] = useState(false);
   const [showPassword, setshowPassword] = useState(false);
