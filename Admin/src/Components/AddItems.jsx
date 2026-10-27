@@ -46,7 +46,7 @@ const AddItems = () => {
         payload.append(key, val)
       })
 
-       await axios.post('https://food-web-project-2.onrender.com/api/items', payload,
+       await axios.post('https://food-web-project-2.onrender.com/api/items', payload,{withCredentials:true},
         { headers: { 'Content-Type': 'multipart/form-data' } }
       );
 

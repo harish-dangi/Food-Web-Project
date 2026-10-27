@@ -13,7 +13,7 @@ const List = () => {
   useEffect(() => {
     const fetchItems = async () => {
       try {
-        const { data } = await axios.get('http://localhost:4000/api/items/')
+        const { data } = await axios.get('https://food-web-project-2.onrender.com/api/items/')
         setItems(data);
       } catch (err) {
         console.error(err);
