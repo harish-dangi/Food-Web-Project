@@ -16,7 +16,7 @@ const OurHomeMenu = () => {
   const [menuData, setMenuData] = useState([]);
   useEffect(() => {
     // Fetch menu data from the API
-    axios.get('https://builder-ai-website.onrender.com/api/items')
+    axios.get('https://food-web-project-2.onrender.com/api/items')
       .then(res => {
         const grouped = res.data.reduce((acc, item) => {
           if (!acc[item.category]) {

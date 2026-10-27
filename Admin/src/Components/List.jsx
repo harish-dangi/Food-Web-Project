@@ -28,7 +28,7 @@ const List = () => {
   const handleDelete = async (itemId) => {
     if (!window.confirm("Are you sure you want to delete this item?")) return;
     try {
-      await axios.delete(`https://builder-ai-website.onrender.com/api/items/${itemId}`);
+      await axios.delete(`https://food-web-project-2.onrender.com/api/items/${itemId}`);
       setItems(prev => prev.filter(item => item._id !== itemId));
      
 

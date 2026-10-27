@@ -16,7 +16,7 @@ const Order = () => {
     const fetchOrders = async () => {
       try {
         const response = await axios.get(
-          'https://builder-ai-website.onrender.com/api/order/getall',
+          'https://food-web-project-2.onrender.com/api/order/getall',
           {
             headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
           }
@@ -63,7 +63,7 @@ const Order = () => {
   const handleStatusChange = async (orderId, newStatus) => {
     try {
       const res = await axios.put(
-        `https://builder-ai-website.onrender.com/api/order/${orderId}`,
+        `https://food-web-project-2.onrender.com/api/order/${orderId}`,
         { paymentStatus: newStatus }
       );
       setOrders(prev =>
@@ -118,7 +118,7 @@ const Order = () => {
   const updatePaymentStatus = async (orderId, status) => {
     try {
       const fetchOrders = await axios.patch(
-        `https://builder-ai-website.onrender.com/api/order/${orderId}/payment-status`,
+        `https://food-web-project-2.onrender.com/api/order/${orderId}/payment-status`,
         {
           paymentStatus: status,
         }

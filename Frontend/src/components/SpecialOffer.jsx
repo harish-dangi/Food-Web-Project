@@ -18,7 +18,7 @@ const SpecialOffer = () => {
 
   useEffect(() => {
     axios
-      .get("https://builder-ai-website.onrender.com/api/items")
+      .get("https://food-web-project-2.onrender.com/api/items")
       .then((res) => setItems(res.data));
   }, []);
   const { cartItems, addToCart, updateQuantity, removeFromCart } = useCart();

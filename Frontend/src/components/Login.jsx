@@ -12,7 +12,7 @@ import {
 import { Link } from "react-router-dom";
 
 const Login = ({ onLoginSuccess, onClose }) => {
-  const url = "https://builder-ai-website.onrender.com";
+  const url = "https://food-web-project-2.onrender.com";
 
   const [showToast, setShowToast] = useState(false);
   const [showPassword, setshowPassword] = useState(false);

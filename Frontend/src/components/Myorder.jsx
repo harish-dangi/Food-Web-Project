@@ -24,7 +24,7 @@ const Myorder = () => {
     const fetchOrders = async () => {
       try {
         const response = await axios.get(
-          "https://builder-ai-website.onrender.com/api/order/getall",
+          "https://food-web-project-2.onrender.com/api/order/getall",
           {
             headers: { Authorization: `Bearer ${token}` },
           },

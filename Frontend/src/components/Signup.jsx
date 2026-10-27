@@ -29,7 +29,7 @@ const AwesomeToast = ({ message, icon }) => {
     </div>
   );
 };
-const url = "https://builder-ai-website.onrender.com";
+const url = "https://food-web-project-2.onrender.com";
 const Signup = () => {
   const [showToast, setShowToast] = useState(false);
   const [showPassword, setshowPassword] = useState(false);
