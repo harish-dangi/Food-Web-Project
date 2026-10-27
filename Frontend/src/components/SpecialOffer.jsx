@@ -134,7 +134,7 @@ const SpecialOffer = () => {
           onClick={() => setShowAll(!showAll)}
           className="flex items-center gap-3 bg-linear-to-r fill-amber-200 from-orange-400  to-amber-500 text-white px-5 py-2 rounded-2xl font-bold  text-lg tracking-tighter hover:gap-4 hover:scale-95 hover:shadow-xl hover:shadow-amber-500/20 transition-all duration-300 group border-2 border-amber-400/20 overflow-hidden cursor-pointer"
         >
-          <div className=" absolute inset-0 bg-linear-to-r fill-amber-500/20 via-transparent to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"  />
+          <div className=" absolute inset-0 bg-linear-to-r fill-amber-500/20 via-transparent to-amber-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none" />
           <FaFire className="text-xl animate-pulse" />
           <span>{showAll ? "Show Less" : "Show More"}</span>
           <div className="h-full w-1 bg-amber-400/40 absolute right-0 top-0 group-hover:animate-border-pulse" />
